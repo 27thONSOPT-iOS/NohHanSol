@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var networkScrollView: UIScrollView!
   @IBOutlet weak var topButton: UIButton!
   @IBOutlet weak var networkCollectionView: UICollectionView!
+  @IBOutlet weak var topView: UIView!
   
   
   // MARK: - IBActions
@@ -99,6 +100,18 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
                         UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     
     return UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+  }
+  
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    self.view.frame.origin.y = -self.topView.frame.height
+    self.view.frame.size.height += self.topView.frame.height
+    self.topView.isHidden = true
+  }
+  
+
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    self.view.frame.origin.y = 0
+    self.topView.isHidden = false
   }
 }
 
