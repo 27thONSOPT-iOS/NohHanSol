@@ -11,6 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
   
+  
   // MARK: - Vars
   var part : String? = "iOS"
   var name : String? = "노한솔"

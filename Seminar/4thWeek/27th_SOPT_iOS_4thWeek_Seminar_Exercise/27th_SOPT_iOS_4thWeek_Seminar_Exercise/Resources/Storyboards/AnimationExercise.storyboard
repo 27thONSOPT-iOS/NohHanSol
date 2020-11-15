@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qNK-3U-kza">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation View Controller-->
+        <scene sceneID="emf-O2-b24">
+            <objects>
+                <viewController id="qNK-3U-kza" customClass="AnimationViewController" customModule="_7th_SOPT_iOS_4thWeek_Seminar_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yT3-3V-MQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="4Az-Ha-eyw">
+                                <rect key="frame" x="57" y="257" width="244" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="sIw-bJ-gsV"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyN-qU-f5S">
+                                <rect key="frame" x="166" y="607" width="82" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Alpha">
+                                    <color key="titleColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAnimating:" destination="qNK-3U-kza" eventType="touchUpInside" id="l84-Q2-PUk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn4-5r-erD">
+                                <rect key="frame" x="158" y="675" width="98" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="&amp;Move">
+                                    <color key="titleColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAnimating:" destination="qNK-3U-kza" eventType="touchUpInside" id="2s0-TX-fBh"/>
+                                    <action selector="setMoving:" destination="qNK-3U-kza" eventType="touchUpInside" id="QSC-7Y-myC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tc7-JZ-Dfv">
+                                <rect key="frame" x="149.5" y="743" width="115" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="&amp;Rotate">
+                                    <color key="titleColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAnimating:" destination="qNK-3U-kza" eventType="touchUpInside" id="dLu-0M-Hgh"/>
+                                    <action selector="setBoth:" destination="qNK-3U-kza" eventType="touchUpInside" id="S2P-D8-Hiz"/>
+                                    <action selector="setMoving:" destination="qNK-3U-kza" eventType="touchUpInside" id="juR-fK-eZi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PCM-lM-9TE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Az-Ha-eyw" firstAttribute="leading" secondItem="PCM-lM-9TE" secondAttribute="leading" constant="57" id="BYY-Bd-Ljx"/>
+                            <constraint firstItem="FyN-qU-f5S" firstAttribute="top" secondItem="4Az-Ha-eyw" secondAttribute="bottom" constant="150" id="QXP-aA-kfR"/>
+                            <constraint firstItem="Tc7-JZ-Dfv" firstAttribute="centerX" secondItem="PCM-lM-9TE" secondAttribute="centerX" id="U1k-gB-RCr"/>
+                            <constraint firstItem="PCM-lM-9TE" firstAttribute="trailing" secondItem="4Az-Ha-eyw" secondAttribute="trailing" constant="113" id="WAm-uy-JdL"/>
+                            <constraint firstItem="Tc7-JZ-Dfv" firstAttribute="top" secondItem="fn4-5r-erD" secondAttribute="bottom" constant="20" id="Ydn-xk-Abf"/>
+                            <constraint firstItem="fn4-5r-erD" firstAttribute="top" secondItem="FyN-qU-f5S" secondAttribute="bottom" constant="20" id="Zkx-dk-fF2"/>
+                            <constraint firstItem="4Az-Ha-eyw" firstAttribute="top" secondItem="PCM-lM-9TE" secondAttribute="top" constant="213" id="fCR-aU-3ct"/>
+                            <constraint firstItem="fn4-5r-erD" firstAttribute="centerX" secondItem="PCM-lM-9TE" secondAttribute="centerX" id="m7x-pg-C5y"/>
+                            <constraint firstItem="FyN-qU-f5S" firstAttribute="centerX" secondItem="PCM-lM-9TE" secondAttribute="centerX" id="n3g-8K-MOE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ryanImageView" destination="4Az-Ha-eyw" id="faG-ge-AJ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WhD-xC-EYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ryan" width="608" height="444"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

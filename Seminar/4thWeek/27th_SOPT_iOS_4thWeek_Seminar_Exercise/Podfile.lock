@@ -1,0 +1,20 @@
+PODS:
+  - FSCalendar (2.8.1)
+  - RxSwift (6.0.0-rc.1)
+
+DEPENDENCIES:
+  - FSCalendar
+  - RxSwift (= 6.0.0-rc.1)
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - RxSwift
+
+SPEC CHECKSUMS:
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+  RxSwift: dae1a32c48148897494b9e2a6b00a68b40694236
+
+PODFILE CHECKSUM: 3a17d0c5d1f5d4db1bafdf4d48e01572b9672997
+
+COCOAPODS: 1.9.1
